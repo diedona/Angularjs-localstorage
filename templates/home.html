@@ -1,5 +1,26 @@
 <div class="row">
     <div class="col-md-12">
-        <h1>From Template! {{Title | date: 'dd/MM/yyyy'}}</h1>
+        <h1>Dados de LocalStorage - {{Title | date: 'dd/MM/yyyy'}}</h1>
+    </div>
+</div>
+
+<!-- {{Type}} >> {{isSupported}} -->
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="Task in Tasks">{{Task.Name}}</li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <form name="frmTask" ng-submit="SalvarTask(Task, frmTask)">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" placeholder="Nome da tarefa" ng-model="Task.Name">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Salvar</button>
+            </div>
+        </form>
     </div>
 </div>
