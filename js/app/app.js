@@ -1,3 +1,3 @@
 (function(){
-    var app = angular.module('LocalStorage', ['ls.config', 'ls.controllers.home']);
+    var app = angular.module('LocalStorage', ['LocalStorageModule', 'ls.config', 'ls.controllers.home']);
 }());
